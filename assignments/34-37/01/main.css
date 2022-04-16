@@ -1,0 +1,115 @@
+.assign01 {
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #eee;
+    line-height: 60px;
+}
+
+.assign01:empty {
+    background-color: red;
+}
+
+
+/* ************** */
+
+
+.assign02 {
+    position: relative;
+    width: 300px;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #eee;
+    line-height: 60px;
+}
+
+.assign02::first-letter {
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    left: 0px;
+    font-size: 25px;
+}
+
+
+/* ************** */
+.assign03 {
+    position: relative;
+height: 50px;
+width: 400px;
+line-height: 50px;
+    background-color: #eee;
+    border: solid red;
+    border-width: 0 0 0 5px;
+padding-left: 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+
+.assign03::before {
+    content: attr(data-person);
+    background-color: #eee;
+    position: absolute;
+    left: -80px;
+    height: 50px;
+    line-height: 50px;
+    width: 60px;
+    text-align: center;
+}
+
+.assign03::after 
+{
+    --width: 15px;
+    content: "";
+    position: absolute;
+    border: solid ;
+    border-color: transparent red transparent transparent;
+    border-width:var(--width);  
+    left: calc(var(--width) * 2 * -1);
+    top: calc(50% - (var(--width) ));
+}
+
+
+/* ************** */
+
+.assign04::after 
+{
+    content: none;
+    position: absolute;
+    border: solid ;
+    border-color: transparent red transparent transparent;
+    border-width:15px;  
+    left: -15;
+    top: 30;
+}
+
+.assign04 {
+    counter-increment: members-counter;
+    position: relative;
+height: 50px;
+width: 400px;
+line-height: 50px;
+    background-color: #eee;
+    border: solid red;
+    border-width: 0 0 0 5px;
+padding-left: 20px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.assign04::before {
+    content: counter(members-counter);
+    background-color: #eee;
+    position: absolute;
+    left: -80px;
+    height: 50px;
+    line-height: 50px;
+    width: 60px;
+    text-align: center;
+}

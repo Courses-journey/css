@@ -1,0 +1,6 @@
+div div , div p + :not( div:first-child)
+{
+    font-size: 30px;
+    color: red;
+}
+

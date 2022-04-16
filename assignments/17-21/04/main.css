@@ -1,0 +1,22 @@
+a {
+    /* colors */
+    color: white;
+    background-color: #009688;
+    border-bottom: 10px solid #00514A;
+
+    /* text modification */
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: bold;
+
+    padding: 10px;
+
+    /* center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}

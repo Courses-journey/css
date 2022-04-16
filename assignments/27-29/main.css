@@ -1,0 +1,55 @@
+
+.parent{
+    padding: 0px;
+    width: 400px;
+    overflow: hidden;
+    margin: 50px auto;
+    background-color: #eee;
+}
+
+.container{
+    float: left;
+    margin: 15px 0 0 15px;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #aaa;
+}
+
+.full{
+    width: calc(100% - 30px);
+}
+
+.third{
+    
+    width: calc((100% - 60px) / 3);
+}
+
+.half{
+    width: calc((100% - 45px) / 2);
+}
+
+.quarter{
+    margin-bottom: 15px;
+    width: calc((100% - 75px) / 4);
+}
+
+
+/* ***************** */
+
+.as2 {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #B3B3B3 ;
+  color: black;
+}
+
+.one {
+ opacity: .7;
+}
+
+.two {
+ opacity: .6;
+}

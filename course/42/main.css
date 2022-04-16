@@ -1,0 +1,22 @@
+.one {
+    display: inline-block;
+    background-color: #eee;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+font-size: 30px;
+    transition-duration: 900ms;
+    scale: 150%;
+}
+
+p {
+    text-align: center;
+    
+}
+
+.one:hover {
+    width: 300px;
+     background-color: #FF0000;
+    /* height: 300px; */
+    /* font-size: 50px; */
+}

@@ -1,0 +1,7 @@
+body > div[title="Elzero"]:nth-of-type(3),
+div[title="Hello"],
+div[title="HTML"]
+{
+    font-size: 30px;
+    color: red;
+}

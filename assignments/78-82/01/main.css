@@ -1,0 +1,5 @@
+
+div:first-of-type,div:last-of-type{
+    font-size: 30px;
+    color: red;
+}

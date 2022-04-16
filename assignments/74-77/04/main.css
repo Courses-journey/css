@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+*::after {
+    margin: 0px;
+}
+
+*::before {
+    margin: 0px;
+}
+
+:root {
+    --char-color: #323234;
+    --moving-square-color: #FEA604;
+    --char-width: 60px;
+    --between-char-width: 20px;
+    --first-anim-duration: 2s;
+    --second-anim-duration: 2s;
+}
+
+
+.parent {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid {
+    position: relative;
+    padding: 10px;
+
+    width: fit-content;
+    height:min-content;
+    background-color: #eee;
+
+    display: grid;
+    grid-template-columns: var(--char-width) calc(var(--char-width) * 4) var(--between-char-width) var(--char-width) calc(var(--char-width) * 4);
+    grid-template-rows: 
+    var(--char-width) 
+    calc(var(--char-width) * 3)  
+    var(--char-width) 
+    calc(var(--char-width) * 3) 
+    var(--char-width);
+
+    /* gap: 10px; */
+}
+
+.cell {
+    background-color: var(--char-color);
+}
+
+.one {
+    grid-area: 1 / 1 / 6 / 1;
+    /* grid-area: 1 / 1 / span 5 / 1; */
+}
+
+.two {
+    grid-area: 1 / 2 / 1 / 2;
+}
+
+.three {
+    grid-area: 1 / 4 / 6 / 4;
+    /* grid-area: 1 / 4 / span 5 / 4; */
+}
+
+.four {
+    grid-area: 3 / 2 / 3 / 2;
+}
+
+.five {
+    grid-area: 5 / 2 / 5 / 2;
+}
+
+.six {
+    grid-area: 5 / 5 / 5 / 5;
+}
+
+
+.grid::before {
+    z-index: 1;
+
+    content: "";
+    
+    
+    background-color: var(--moving-square-color);
+    width: var(--char-width);
+    height: var(--char-width);
+    transform: scale(80%);
+
+    animation-name: e-pointer-movement;
+    animation-duration: var(--first-anim-duration);
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    position: absolute;
+     left: calc(
+        10px + 
+        calc(var(--char-width) * 4)
+        );
+    top: calc(
+        10px + 
+        calc(var(--char-width) * 8) 
+    );
+}
+
+.grid::after {
+    z-index: 1;
+
+    width: var(--char-width);
+    height: var(--char-width);
+    transform: scale(80%);
+
+    content: "";
+    
+    background-color: var(--moving-square-color);
+
+    
+    animation-name: l-pointer-movement;
+    animation-delay: var(--first-anim-duration);
+    animation-duration: var(--second-anim-duration);
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+    
+    position: absolute;
+    left: calc(
+        10px + 
+        var(--char-width) + 
+        calc(var(--char-width) * 4) + 
+        var(--between-char-width)
+        );
+    top: 10px;
+}
+
+
+@keyframes e-pointer-movement {
+    0%  {
+    left: calc(
+        10px + 
+        calc(var(--char-width) * 4)
+        );
+    top: 10px;
+    }
+
+    16.6% {
+    left: calc(10px);
+    top: 10px; 
+    }
+
+    33.1% {
+    left: calc(10px);
+    top: calc(
+        10px + 
+        calc(var(--char-width) * 4) 
+    );
+    }
+
+    49.7% {
+    left: calc(
+        10px + 
+        calc(var(--char-width) * 4)
+        );
+    top: calc(
+        10px + 
+        calc(var(--char-width) * 4) 
+    );
+    }
+
+    66.3% {
+    left: calc(10px);
+    top: calc(
+        10px + 
+        calc(var(--char-width) * 4) 
+    );
+    }
+
+    82.9% {
+    left: calc(10px);
+    top: calc(
+        10px + 
+        calc(var(--char-width) * 8) 
+    );
+    }
+
+    100% {
+     left: calc(
+        10px + 
+        calc(var(--char-width) * 4)
+        );
+    top: calc(
+        10px + 
+        calc(var(--char-width) * 8) 
+    );
+    }
+}
+
+@keyframes l-pointer-movement {
+   
+    0% {
+        left: calc(
+            10px + 
+            var(--char-width) + 
+            calc(var(--char-width) * 4) + 
+            var(--between-char-width));
+    top: 10px;
+    }
+
+    50% {
+        left: calc(
+        10px + 
+        var(--char-width) + 
+        calc(var(--char-width) * 4) + 
+        var(--between-char-width)
+        );
+
+    top: calc(
+        10px +
+        var(--char-width) + 
+        calc(var(--char-width) * 3)  +
+        var(--char-width) +
+        calc(var(--char-width) * 3) 
+        );
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        left: calc(
+        10px + 
+        var(--char-width) + 
+        calc(var(--char-width) * 4) + 
+        var(--between-char-width) +
+        calc(var(--char-width) * 4) 
+        );
+
+    top: calc(
+        10px +
+        var(--char-width) + 
+        calc(var(--char-width) * 3)  +
+        var(--char-width) +
+        calc(var(--char-width) * 3) 
+        );
+
+        opacity: 0;
+    }
+}

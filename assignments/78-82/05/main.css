@@ -1,0 +1,5 @@
+div:nth-of-type(2) div[title="Elzero"] 
+{
+    font-size: 30px;
+    color: red;
+}

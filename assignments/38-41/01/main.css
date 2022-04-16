@@ -1,0 +1,49 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+div {
+    --size:100px;
+    content: "Element";
+    display: inline-block;
+    width: var(--size);
+    height:var(--size);
+    border-radius: var(--size);
+    background-color: #eee;
+    color: white;
+    counter-increment: counter;
+    box-shadow: -5px -5px  0 0 #E91E63,5px 5px 0 0 #2196FF;
+    margin: 10px;
+    position: relative;
+    border: #000 solid;
+}
+
+div::before {
+    --size:20px;
+    content: counter(counter);
+    display: inline-block;
+    width: var(--size);
+    height:var(--size);
+    border-radius: var(--size);
+    background-color: #000;
+    color: white;
+    text-align: center;
+    line-height: var(--size);
+    position: absolute;
+    left: calc(50% - (var(--size)/2));
+    top: -10px;
+    padding: 3px;
+}
+
+div::after {
+   content: "Element";
+   width: 100px;
+   height: 30px;
+   color: #000;
+   text-align: center;
+   line-height: 30px;
+   position: absolute;
+   top: calc(50% - 15px);
+   left: 50% - 50px;
+}

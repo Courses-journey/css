@@ -1,0 +1,30 @@
+.parent {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: 30px;
+    width: 400px;
+    height: 200px;
+    background-color: #eee;
+    margin: auto;
+    transition-duration: 500ms;
+}
+
+.child {
+    position: absolute;
+    left: calc(50% - 150px);
+    top: 50px;
+    width: 300px;
+    height: 60px;
+    background-color: #ddd;
+    margin: auto;
+    transition-delay: 500ms;
+    transition-duration: 200ms;
+}
+
+.parent:hover {
+    top: 0px;
+}
+
+.child:hover {
+    top: 100px;
+}

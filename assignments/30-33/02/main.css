@@ -1,0 +1,55 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+
+}
+
+div {
+    width: 400px;
+    margin: auto;
+    background: #eeee;
+    border: 2px solid;
+    border-color: red blue;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+
+span {
+   width: 30px;
+   height: 20px;
+   background-color: blue;
+   color: white;
+   border: solid;
+   border-width: 0px 2px;
+   border-color:red ;
+   position: absolute;
+}
+
+.top-left {
+  top: -10px;
+  left: -15px;
+  border-right: transparent;
+}
+
+.top-right {
+  top: -10px;
+  right: -15px;
+  border-left: transparent;
+
+}
+
+.bottom-left {
+  bottom: -10px;
+  left: -15px;
+  border-right: transparent;
+
+}
+
+.bottom-right {
+  bottom: -15px;
+  right: -15px;
+  border-left: transparent;
+
+}

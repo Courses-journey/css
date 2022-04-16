@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  width: 600px;
+  height: 60px;
+  background-color: #eee;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  border: 7px solid ;
+  border-image: 
+    linear-gradient(
+      to right, 
+      red, 
+      red 20%, 
+      blue 20%,
+      blue 40%,
+      green 40%,
+      green 60%,
+      crimson 60%,
+      crimson 80%,
+      rebeccapurple 80%,
+      rebeccapurple 100%
+    ) 1 ; 
+}
+
+div::first-letter {
+  color: red;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

@@ -1,0 +1,88 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.grid {
+  padding: 10px;
+  background-color: #eee;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  padding: 7px;
+  background-color: #FFFFFF;
+
+  border:  solid orangered;
+  border-width: 0px 0px 2px 0px;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.card::after {
+  margin: 0px 15px;
+ content: '"';
+ font-size: 40px;
+ font-weight: bold;
+ color: #ccc;
+display: block;
+position: absolute ;
+bottom: -15px;
+right: 0;
+}
+
+.job-title {
+ color: #aaa;
+ font-size: 15px;
+}
+
+.body {
+   padding-top: 10px;
+ padding-bottom: 10px;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+.description {
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+
+.one {
+  grid-column: 1 / span 2;
+}
+
+.three {
+  grid-row: span 3;
+  background-color: black;
+  color: white;
+}
+
+.four {
+   grid-row: span 2;
+  }
+  
+  .five {
+    grid-column: span 2;
+    
+}
+  
+  .six {
+    grid-column: span 2;
+    
+}

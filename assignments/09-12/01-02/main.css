@@ -1,0 +1,47 @@
+.container {
+    display: inline-block;
+    padding: 30px;
+    background-color: whitesmoke;
+    border-width: 5px;
+    border-style: solid;
+    outline: 5px black solid;
+    margin: 5px;
+}
+
+.container.shape01{
+border-color: red;
+}
+
+.container.shape02{
+border-color: blue green;
+}
+
+.container.shape03{
+      border-style: dashed;
+border-color: red green blue yellow;
+}
+
+.task{
+    border-width: 0px;
+    margin: 20px;
+    padding: 10px;
+    border-left-width: 7px;
+    border-spacing: 20px;
+    border-style: solid;
+    width: 400px;
+    background-color: whitesmoke;
+    outline: 10px whitesmoke solid;
+}
+
+
+.task.shape01{
+    border-color: #E91E63;
+}
+
+.task.shape02{
+    visibility: hidden;
+}
+
+.task.shape03{
+    border-color: #009688;
+}
